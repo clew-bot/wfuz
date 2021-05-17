@@ -2,12 +2,7 @@
   <div>
     <img src="../assets/onepiece.jpg" alt="one piece" class="op" />
     <img src="../assets/zacian.webp" alt="zacian" class="op" />
-    <img
-      src="../assets/oldapple.webp"
-      alt="apple"
-      class="op"
-      style="display: flex; flex-grow: 2"
-    />
+    <img src="../assets/oldapple.webp" alt="apple" class="op" style="" />
     <img src="../assets/animal.jpg" alt="animal" class="op" />
   </div>
 </template>
@@ -20,7 +15,8 @@ export default {
 
 <style scoped>
 .op {
-  max-height: 400px;
+  height: 200px;
+  max-width: 100%;
   object-fit: cover;
 }
 </style>

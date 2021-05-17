@@ -2,24 +2,63 @@
   <nav class="sidebar">
     <ul class="side-nav">
       <li class="side-nav__item">
-        <i class="copyright icon"></i>
+        <router-link to="/login">
+          <i class="copyright icon" size="massive"></i>
+        </router-link>
       </li>
       <li class="side-nav__item">
-        <i class="phone icon" size="large"></i>
+        <router-link to="register">
+          <i class="phone icon"></i>
+        </router-link>
       </li>
       <li class="side-nav__item">
-        <i class="thumbtack icon"></i>
+        <router-link to="/secret">
+          <i class="code icon"></i>
+        </router-link>
       </li>
       <li class="side-nav__item">
-        <i class="code icon"></i>
+        <button @click="signout">
+          <i class="sign out alternate icon"></i>
+        </button>
+      </li>
+      <li>
+        Logged in: <span v-if="loggedIn"> Sure</span><span v-else>No</span>
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
+import firebase from "firebase/app";
+import "firebase/auth";
 export default {
   name: "SideNav",
+  created() {
+    firebase.auth().onAuthStateChanged((user) => {
+      this.loggedIn == !!user;
+      // if(user) {
+      //   this.loggedIn = true
+      // } else {
+      //   this.loggedIn = false
+      // }
+    });
+  },
+  data() {
+    return {
+      loggedIn: false,
+    };
+  },
+  methods: {
+    async signout() {
+      try {
+        const data = await firebase.auth().signOut();
+        console.log(data);
+        this.$router.replace({ name: "home" });
+      } catch (err) {
+        console.log("fuck", err);
+      }
+    },
+  },
 };
 </script>
 
@@ -29,11 +68,22 @@ li {
 }
 
 .side-nav__item {
-  margin-top: 3rem;
-  margin-right: 2.5rem;
+  margin-right: 0.5rem;
+  border: solid 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 10px;
+  border-radius: 10px;
 }
 
 .side-nav {
-  border: solid gray 2px;
+  display: flex;
+}
+
+@media screen and (max-width: 500px) {
+  .side-nav {
+    display: none;
+  }
 }
 </style>
