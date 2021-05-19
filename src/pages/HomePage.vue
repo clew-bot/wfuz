@@ -1,13 +1,22 @@
 <template>
-  <div class="homepage">
-    <div class="abilities">
-      <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
-      <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
-      <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
-      <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
+  <div>
+    <div class="homepage">
+      <div class="abilities">
+        <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
+        <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
+        <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
+        <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
+        <img
+          src="../assets/vue.png"
+          alt="vue is better"
+          class="popout"
+          height="10"
+        />
+      </div>
+      <ImageHolder></ImageHolder>
+      <WelcomeCard></WelcomeCard>
     </div>
-    <ImageHolder></ImageHolder>
-    <WelcomeCard></WelcomeCard>
+    <div class="popout"></div>
   </div>
 </template>
 
@@ -22,6 +31,34 @@ export default {
 </script>
 
 <style scoped>
+.popout {
+  height: 30px;
+  animation: popout 2s infinite;
+  -webkit-animation: popout 2s infinite;
+}
+@keyframes popout {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes popout {
+  from {
+    -webkit-transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
 .abilities {
   display: flex;
   justify-content: space-evenly;
