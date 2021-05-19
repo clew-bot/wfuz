@@ -7,15 +7,17 @@
       <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
     </div>
     <ImageHolder></ImageHolder>
+    <WelcomeCard></WelcomeCard>
   </div>
 </template>
 
 <script>
 import ImageHolder from "../components/ImageHolder.vue";
+import WelcomeCard from "../components/WelcomeCard";
 
 export default {
   name: "HomePage",
-  components: { ImageHolder },
+  components: { ImageHolder, WelcomeCard },
 };
 </script>
 
