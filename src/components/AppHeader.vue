@@ -15,13 +15,22 @@
       <div class="icon__buttons">
         <md-toolbar class="toolbar">
           <h1 class="md-title" style="flex: 1">PEANUTS</h1>
-
-          <md-icon class="md-size-1x">login</md-icon>
-          <md-icon class="md-size-1x">space_dashboard</md-icon>
-          <md-icon class="md-size-1x">insert_emoticon</md-icon>
-          <md-icon class="md-size-1x">cottage</md-icon>
-          <md-icon class="md-size-1x">logout</md-icon>
-
+          <div class="icons__icon">
+            <router-link to="/login">
+              <md-icon class="md-size-1x">login</md-icon>
+            </router-link>
+            <router-link to="/secret">
+              <md-icon class="md-size-1x">space_dashboard</md-icon>
+            </router-link>
+            <md-icon class="md-size-1x">insert_emoticon</md-icon>
+            <md-icon class="md-size-1x">cottage</md-icon>
+            <md-icon
+              class="md-size-1x"
+              @click.native="signout"
+              style="cursor: pointer;"
+              >logout</md-icon
+            >
+          </div>
           <md-button class="md-icon-button">
             <md-icon>more_vert</md-icon>
             <img src="../assets/g.svg" alt="" width="100px" />
@@ -34,11 +43,33 @@
 
 <script>
 // import SideNav from "../components/SideNav";
-
+import firebase from "firebase/app";
+import "firebase/auth";
 export default {
   name: "AppHeader",
   data() {
-    return {};
+    return { loggedIn: false };
+  },
+  created() {
+    firebase.auth().onAuthStateChanged((user) => {
+      this.loggedIn == !!user;
+      // if(user) {
+      //   this.loggedIn = true
+      // } else {
+      //   this.loggedIn = false
+      // }
+    });
+  },
+  methods: {
+    async signout() {
+      try {
+        const data = await firebase.auth().signOut();
+        console.log(data);
+        this.$router.replace({ name: "home" });
+      } catch (err) {
+        console.log("fuck", err);
+      }
+    },
   },
   // components: { SideNav },
 };
@@ -57,6 +88,11 @@ export default {
   align-items: center;
   justify-content: space-around;
   flex-grow: 2;
+}
+
+.md-size-1x {
+  margin-left: 1.3rem;
+  pointer-events: all;
 }
 
 .toolbar {
