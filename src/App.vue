@@ -16,6 +16,7 @@ export default {
 </script>
 
 <style>
+@import url("//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons");
 #app {
   font-family: "Roboto", sans-serif;
   margin-left: 1000px;
