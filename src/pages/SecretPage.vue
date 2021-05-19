@@ -1,14 +1,14 @@
 <template>
   <div>
     <md-toolbar>
-      <h3 class="md-title" style="flex: 1">Title</h3>
+      <h1 class="md-title" style="flex: 1">HELLLOOO</h1>
       <md-button class="md-icon-button">
         <md-icon>more_vert</md-icon>
       </md-button>
     </md-toolbar>
 
     <md-toolbar class="md-accent" md-elevation="1">
-      <h3 class="md-title" style="flex: 1">Title</h3>
+      <h3 class="md-title" style="flex: 1">Kidtastic</h3>
       <md-button>Refresh</md-button>
       <md-button class="md-primary">Create</md-button>
     </md-toolbar>
@@ -33,7 +33,7 @@
       </div>
 
       <div class="md-toolbar-row md-toolbar-offset">
-        <h3 class="md-title">Title on a second row</h3>
+        <h1 class="md-title">Title on a second row</h1>
       </div>
     </md-toolbar>
   </div>
