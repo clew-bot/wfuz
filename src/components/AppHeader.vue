@@ -86,7 +86,7 @@ export default {
   align-items: center;
   /* border: dashed 1px green; */
   margin-top: 30px;
-  width: auto;
+  width: 100%;
   position: sticky;
 }
 

@@ -1,41 +1,32 @@
 <template>
-  <div>
-    <md-toolbar>
-      <h1 class="md-title" style="flex: 1">HELLLOOO</h1>
-      <md-button class="md-icon-button">
-        <md-icon>more_vert</md-icon>
-      </md-button>
-    </md-toolbar>
+  <div class="container">
+    <md-content class="title"><h1>Dashboard - Welcome!</h1></md-content>
+    <md-content class="title"><h1>Dashboard - Welcome!</h1></md-content>
+    <md-content class="title"><h1>Dashboard - Welcome!</h1></md-content>
+    <md-content class="title"><h1>Dashboard - Welcome!</h1></md-content>
+    <md-content class="title"><h1>Dashboard - Welcome!</h1></md-content>
+    <md-content class="title"><h1>Dashboard - Welcome!</h1></md-content>
+    <md-content class="title"><h1>Dashboard - Welcome!</h1></md-content>
+    <md-content class="title"><h1>Dashboard - Welcome!</h1></md-content>
+    <md-content class="title"><h1>Dashboard - Welcome!</h1></md-content>
 
-    <md-toolbar class="md-accent" md-elevation="1">
-      <h3 class="md-title" style="flex: 1">Kidtastic</h3>
-      <md-button>Refresh</md-button>
-      <md-button class="md-primary">Create</md-button>
-    </md-toolbar>
+    <md-card md-with-hover>
+      <md-ripple>
+        <md-card-header>
+          <div class="md-title">Entry Card #1</div>
+          <div class="md-subhead">It also have a ripple</div>
+        </md-card-header>
 
-    <md-toolbar class="md-large md-primary">
-      <div class="md-toolbar-row">
-        <div class="md-toolbar-section-start">
-          <md-button class="md-icon-button">
-            <md-icon>menu</md-icon>
-          </md-button>
-        </div>
+        <md-card-content>
+          <img src="../assets/animal.jpg" alt="" style="border-radius: 5px;" />
+        </md-card-content>
 
-        <div class="md-toolbar-section-end">
-          <md-button class="md-icon-button">
-            <md-icon>refresh</md-icon>
-          </md-button>
-
-          <md-button class="md-icon-button">
-            <md-icon>more_vert</md-icon>
-          </md-button>
-        </div>
-      </div>
-
-      <div class="md-toolbar-row md-toolbar-offset">
-        <h1 class="md-title">Title on a second row</h1>
-      </div>
-    </md-toolbar>
+        <md-card-actions>
+          <md-button>Action</md-button>
+          <md-button>Action</md-button>
+        </md-card-actions>
+      </md-ripple>
+    </md-card>
   </div>
 </template>
 
@@ -50,3 +41,24 @@ export default {
   name: "SecretPage",
 };
 </script>
+
+<style scoped>
+.title {
+  border-radius: 5px;
+  box-shadow: 0px 0px 0.5px 1px;
+  margin-bottom: 1rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.md-card {
+  width: 320px;
+  margin: 4px;
+  display: inline-block;
+  vertical-align: top;
+}
+</style>
