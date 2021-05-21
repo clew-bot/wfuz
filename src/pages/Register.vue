@@ -35,7 +35,7 @@ export default {
         console.log(user);
         this.$router.replace({ name: "secret" });
       } catch (err) {
-        console.log("fuck", err);
+        console.log("Something went wrong!", err);
       }
     },
   },

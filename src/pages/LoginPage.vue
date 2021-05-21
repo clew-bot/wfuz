@@ -56,9 +56,6 @@ import "firebase/auth";
 export default {
   data() {
     return {
-      //   lastname: "",
-      //   firstname: "",
-      //   birthday: "",
       email: "",
       password: "",
       error: "",
@@ -75,7 +72,7 @@ export default {
         console.log(val);
         this.$router.replace({ name: "secret" });
       } catch (err) {
-        console.log("fuck", err);
+        console.log("Something went wrong!", err);
       }
     },
   },

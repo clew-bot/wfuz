@@ -50,6 +50,10 @@ export default {
   },
   methods: {
     async signout() {
+      console.log("testing");
+      prompt(
+        "Are you sure you want to sign out? You will be redirected to the homepage"
+      );
       try {
         const data = await firebase.auth().signOut();
         console.log(data);
