@@ -56,10 +56,10 @@ export default {
       );
       try {
         const data = await firebase.auth().signOut();
-        console.log(data);
+        console.log("thedata", data);
         this.$router.replace({ name: "home" });
       } catch (err) {
-        console.log("fuck", err);
+        console.log(err);
       }
     },
   },

@@ -66,12 +66,16 @@ export default {
   },
   methods: {
     async signout() {
+      const letgo = prompt("You sure you want to to sign out?");
+      if (letgo !== "yes") {
+        return;
+      }
       try {
         const data = await firebase.auth().signOut();
-        console.log(data);
+        console.log("i'm data", data);
         this.$router.replace({ name: "home" });
       } catch (err) {
-        console.log("fuck", err);
+        console.log(err);
       }
     },
   },

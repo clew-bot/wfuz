@@ -2,10 +2,11 @@
   <div>
     <div class="homepage">
       <div class="abilities">
+        <!-- <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
         <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
         <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
-        <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
-        <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
+        <div><img src="../assets/react.png" alt="react bb" height="60" /></div> -->
+
         <img
           src="../assets/vue.png"
           alt="vue is better"
@@ -13,7 +14,7 @@
           height="10"
         />
       </div>
-      <ImageHolder></ImageHolder>
+
       <WelcomeCard></WelcomeCard>
     </div>
     <div class="popout"></div>
@@ -21,12 +22,15 @@
 </template>
 
 <script>
-import ImageHolder from "../components/ImageHolder.vue";
 import WelcomeCard from "../components/WelcomeCard";
-
 export default {
   name: "HomePage",
-  components: { ImageHolder, WelcomeCard },
+  components: { WelcomeCard },
+  methods: {
+    clickme() {
+      console.log("hello from click!");
+    },
+  },
 };
 </script>
 
@@ -77,12 +81,6 @@ export default {
   justify-content: center;
   align-items: center;
   animation: App-logo-spin 2s infinite;
-}
-
-.homepage {
-  display: flex;
-  /* flex-direction: column; */
-  border: solid 10px green;
 }
 
 .content {
