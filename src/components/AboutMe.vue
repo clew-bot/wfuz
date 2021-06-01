@@ -1,20 +1,19 @@
 <template>
   <div>
-    <h1>About</h1>
     <div
       @mouseover="(hover = true), (blah = false)"
       @mouseleave="(hover = false), (blah = true)"
       :class="{ active3: hover, notActive3: blah }"
     >
       <div>
-        <img class="img1" src="/assets/img/bw4.jpg" alt="girl" />
+        <img class="img1" src="/assets/img/snow.jpg" alt="girl" />
       </div>
       <div
         @mouseover="(hover = true), (blah = false)"
         @mouseleave="(hover = false), (blah = true)"
         :class="{ active: hover, notActive: blah }"
       >
-        <img class="img2" src="/assets/img/bw3.jpg" alt="" />
+        <img class="img2" src="/assets/img/snow2.jpg" alt="" />
       </div>
     </div>
     <h1>Hi</h1>
@@ -40,14 +39,10 @@ export default {
   position: relative;
   top: 0;
   left: 0;
-  border: solid 2px hotpink;
+
   transform: skewX(-10deg);
   animation: moveInRight2 1s;
 }
-
-/* .notActive3:hover {
-  animation: moveInRight 1s;
-} */
 
 .active3 {
   margin: 10vw 20% 10vw 20%;
@@ -56,16 +51,11 @@ export default {
   position: relative;
   top: 0;
   left: 0;
-  border: solid 2px hotpink;
+
   transform: skewX(10deg);
   animation: moveInRight 1s;
 }
 
-/* .container:hover {
-  animation: moveInRight 2s ease-in;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-} */
 .img1 {
   position: relative;
   top: 0;
@@ -86,9 +76,6 @@ export default {
   margin: 4px;
   display: inline-block;
   vertical-align: top;
-}
-md-card:hover {
-  transform: skewX(90deg);
 }
 
 .active {

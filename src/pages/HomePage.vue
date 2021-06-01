@@ -12,7 +12,15 @@
       </div>
 
       <WelcomeCard></WelcomeCard>
-      <AboutMe></AboutMe>
+      <div class="images">
+        <md-content>
+          <AboutMe></AboutMe>
+
+          <SecondRec></SecondRec>
+
+          <Triangle></Triangle>
+        </md-content>
+      </div>
     </div>
     <div class="popout"></div>
   </div>
@@ -21,9 +29,11 @@
 <script>
 import WelcomeCard from "../components/WelcomeCard";
 import AboutMe from "../components/AboutMe";
+import Triangle from "../components/Triangle";
+import SecondRec from "../components/SecondRec";
 export default {
   name: "HomePage",
-  components: { WelcomeCard, AboutMe },
+  components: { WelcomeCard, AboutMe, Triangle, SecondRec },
   methods: {
     clickme() {
       console.log("hello from click!");
@@ -33,6 +43,26 @@ export default {
 </script>
 
 <style scoped>
+.md-content.md-theme-default {
+  background-color: rgb(231, 253, 105);
+}
+
+.md-content {
+  margin-top: 10vw;
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  display: inline-flex;
+}
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -10rem;
+}
+
 .popout {
   height: 30px;
   animation: popout 2s infinite;
@@ -93,11 +123,11 @@ export default {
   animation: App-logo-spin 2s infinite;
 }
 
-.content {
+/* .content {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 @keyframes moveInLeft {
   0% {
     opacity: 0;

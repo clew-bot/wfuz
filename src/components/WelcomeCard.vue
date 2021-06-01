@@ -23,7 +23,7 @@ section {
   /* transform: skewX(20deg); */
   background-size: 100%;
   clip-path: polygon(5% 8%, 86% 3%, 95% 92%, 16% 94%);
-  animation: normalize 2s ease-out;
+  /* animation: normalize 2s ease-out; */
 }
 
 section div {
@@ -39,6 +39,10 @@ section h1 {
   transform: skewX(-40deg);
   font-size: 5em;
   animation: popOutText 2s ease-out;
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 section h1:hover {
