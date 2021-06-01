@@ -23,10 +23,7 @@ section {
   /* transform: skewX(20deg); */
   background-size: 100%;
   clip-path: polygon(5% 8%, 86% 3%, 95% 92%, 16% 94%);
-}
-
-section:hover {
-  animation: normalize 2s infinite;
+  animation: normalize 2s ease-out;
 }
 
 section div {

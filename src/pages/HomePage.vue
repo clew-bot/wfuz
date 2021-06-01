@@ -2,11 +2,7 @@
   <div>
     <div class="homepage">
       <div class="abilities">
-        <!-- <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
-        <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
-        <div><img src="../assets/react.png" alt="react bb" height="60" /></div>
-        <div><img src="../assets/react.png" alt="react bb" height="60" /></div> -->
-
+        <span>made with:</span>
         <img
           src="../assets/vue.png"
           alt="vue is better"
@@ -16,6 +12,7 @@
       </div>
 
       <WelcomeCard></WelcomeCard>
+      <AboutMe></AboutMe>
     </div>
     <div class="popout"></div>
   </div>
@@ -23,9 +20,10 @@
 
 <script>
 import WelcomeCard from "../components/WelcomeCard";
+import AboutMe from "../components/AboutMe";
 export default {
   name: "HomePage",
-  components: { WelcomeCard },
+  components: { WelcomeCard, AboutMe },
   methods: {
     clickme() {
       console.log("hello from click!");
@@ -63,13 +61,25 @@ export default {
   }
 }
 
+@keyframes popout2 {
+  from {
+    -webkit-transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(3);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+.popout:hover {
+  animation: popout2 2s infinite;
+}
+
 .abilities {
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-end;
-  flex-direction: column;
-  flex-grow: 0;
-  border: dashed 5px white;
   background-color: black;
 }
 
