@@ -1,19 +1,19 @@
 <template>
   <div>
     <div
-      @mouseover="(hover = true), (blah = false)"
-      @mouseleave="(hover = false), (blah = true)"
-      :class="{ theActive: hover, notActive3: blah }"
+      @mouseover="(hover = true), (noHover = false)"
+      @mouseleave="(hover = false), (noHover = true)"
+      :class="{ isActiveContainer: hover, noActiveContainer: noHover }"
     >
       <div>
-        <img class="img1" :src="image1" alt="girl" />
+        <img class="img1" :src="image1" v-bind:alt="alt" />
       </div>
       <div
-        @mouseover="(hover = true), (blah = false)"
-        @mouseleave="(hover = false), (blah = true)"
-        :class="{ active: hover, notActive: blah }"
+        @mouseover="(hover = true), (noHover = false)"
+        @mouseleave="(hover = false), (noHover = true)"
+        :class="{ activeImage: hover, notActiveImage: noHover }"
       >
-        <img class="img2" :src="image2" alt="" />
+        <img class="img2" :src="image2" v-bind:alt="alt2" />
       </div>
     </div>
     <h1>Hi</h1>
@@ -24,9 +24,12 @@
 export default {
   name: "ImageComponent",
   components: {},
-  props: ["image1", "image2"],
+  props: ["image1", "image2", "alt", "alt2"],
   data() {
-    return { hover: false, blah: true };
+    return {
+      hover: false,
+      noHover: true,
+    };
   },
   methods: {},
 };
@@ -36,7 +39,7 @@ export default {
 @import "./animations.css";
 @import "./believe.css";
 
-.notActive3 {
+.noActiveContainer {
   display: flex;
   box-shadow: 0 0 0 4;
   position: relative;
@@ -46,7 +49,7 @@ export default {
   animation: moveInRight2 1s;
 }
 
-.theActive {
+.isActiveContainer {
   display: flex;
   box-shadow: 0 0 0 4;
   position: relative;
@@ -83,12 +86,12 @@ export default {
   vertical-align: top;
 }
 
-.active {
+.activeImage {
   animation: fadeOut 1s ease-in;
   animation-fill-mode: forwards;
 }
 
-.notActive {
+.notActiveImage {
   opacity: 1;
   animation: out 1s;
 }

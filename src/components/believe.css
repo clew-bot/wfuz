@@ -1,3 +1,4 @@
+/* LETTER H */
 .notH {
   color: black;
   transform: skewX(-40deg);
@@ -9,6 +10,7 @@
   animation-fill-mode: forwards;
 }
 
+/* LETTER E */
 .notE {
   color: black;
   transform: skewY(-20deg);
@@ -21,6 +23,7 @@
   animation-fill-mode: forwards;
 }
 
+/* LETTER L */
 .notl {
   color: black;
   transform: skewY(12deg);
@@ -34,6 +37,7 @@
   animation-fill-mode: forwards;
 }
 
+/* LETTER second L */
 .notI {
   color: black;
   transform: skewY(-20deg);
@@ -47,6 +51,7 @@
   animation-fill-mode: forwards;
 }
 
+/* LETTER O */
 .notEE {
   color: black;
   transform: skewY(15deg);

@@ -16,7 +16,9 @@
         <md-content>
           <ImageComponent
             image1="/assets/img/snow.jpg"
+            alt="The snow is truly amazing"
             image2="/assets/img/snow2.jpg"
+            alt2="Who doesn't love the snow"
           ></ImageComponent>
           <ImageComponent
             image1="/assets/img/japannight.jpg"

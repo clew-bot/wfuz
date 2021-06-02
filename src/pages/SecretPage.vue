@@ -17,9 +17,7 @@
           <div class="md-subhead">It also have a ripple</div>
         </md-card-header>
 
-        <md-card-content>
-          <img src="../assets/animal.jpg" alt="" style="border-radius: 5px;" />
-        </md-card-content>
+        <md-card-content> </md-card-content>
 
         <md-card-actions>
           <md-button>Action</md-button>
