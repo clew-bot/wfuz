@@ -1,24 +1,19 @@
-# wfuz
+## wfuz aka hello world
 
-## Project setup
+### Website featuring fully custom built vanilla css components and also other fun features. Please clone and fork as you wish!
+
+### run this using the following commands
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### open in localhost:8080
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Contributors
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[chad lew 🐷](https://www.linkedin.com/in/chad-lew-7586711a0/)
