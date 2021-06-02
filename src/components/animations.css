@@ -1,0 +1,189 @@
+@keyframes normalize2 {
+  0% {
+    transform: translateX(100);
+  }
+  30% {
+    transform: translateX(30);
+  }
+  70% {
+    transform: translateX(20);
+  }
+  100% {
+    transform: translateX(0);
+    transform: skewX(-40deg);
+  }
+}
+/* LETTER B */
+@keyframes skewRight {
+  0% {
+    transform: skewX(-40deg);
+  }
+  100% {
+    transform: skewX(40deg);
+  }
+}
+@keyframes skewLeft {
+  0% {
+    transform: skewX(40deg);
+  }
+  100% {
+    transform: skewX(-40deg);
+  }
+}
+
+/* LETTER E */
+@keyframes moveUp {
+  0% {
+    transform: skewY(-20deg);
+  }
+  30% {
+    transform: skewX(30deg);
+  }
+  100% {
+    transform: skewX(20deg);
+  }
+}
+@keyframes moveDown {
+  0% {
+    transform: skewX(20deg);
+  }
+  50% {
+    transform: skewX(30deg);
+  }
+  100% {
+    transform: skewY(-20deg);
+  }
+}
+
+/* LETTER L */
+@keyframes letterLout {
+  0% {
+    transform: skewY(12deg);
+  }
+  30% {
+    color: orange;
+  }
+  100% {
+    transform: skewX(60deg);
+    color: white;
+  }
+}
+@keyframes letterLin {
+  0% {
+    transform: skewX(60deg);
+  }
+  50% {
+    transform: skewY(-22deg);
+    color: black;
+  }
+  100% {
+    transform: skewY(12deg);
+  }
+}
+
+/* LETTER I */
+@keyframes letterIout {
+  0% {
+    transform: skewY(-20deg);
+  }
+  20% {
+    transform: skewX(180deg);
+    color: greenyellow;
+  }
+  100% {
+    transform: skewX(40deg);
+    color: white;
+  }
+}
+@keyframes letterIin {
+  0% {
+    transform: skewX(40deg);
+  }
+  50% {
+    transform: skewX(180deg);
+    color: black;
+  }
+  100% {
+    transform: skewY(-20deg);
+  }
+}
+
+/* LETTER second E */
+@keyframes letterEEout {
+  0% {
+    transform: skewY(15deg);
+  }
+  20% {
+    color: greenyellow;
+  }
+  100% {
+    transform: skewX(40deg);
+    transform: rotate(200deg);
+
+    color: white;
+  }
+}
+@keyframes letterEEin {
+  0% {
+    transform: rotate(200deg);
+  }
+  50% {
+    transform: skewX(180deg);
+    color: black;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform: skewY(15deg);
+  }
+}
+
+@keyframes normalize {
+  0% {
+    clip-path: polygon(5% 8%, 86% 3%, 95% 92%, 16% 94%);
+  }
+  30% {
+    clip-path: polygon(33% 8%, 96% 19%, 74% 75%, 8% 84%);
+  }
+  70% {
+    clip-path: polygon(17% 34%, 81% 5%, 85% 97%, 40% 85%);
+  }
+  100% {
+    clip-path: polygon(5% 8%, 86% 3%, 95% 92%, 16% 94%);
+  }
+}
+
+@keyframes popOutText {
+  0% {
+    /* transform: scaleX(10); */
+  }
+  30% {
+    transform: skewX(40deg);
+    /* font-size: 120px; */
+  }
+  100% {
+    transform: skewX(40deg);
+    /* transform: skewX(-40deg); */
+  }
+}
+
+/* @keyframes moveUp {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    80% {
+      transform: translateY(5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes moveDown {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  } */

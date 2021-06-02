@@ -14,11 +14,11 @@
       <WelcomeCard></WelcomeCard>
       <div class="images">
         <md-content>
-          <AboutMe></AboutMe>
+          <!-- <AboutMe></AboutMe>
 
           <SecondRec></SecondRec>
 
-          <Triangle></Triangle>
+          <Triangle></Triangle> -->
         </md-content>
       </div>
     </div>
@@ -28,12 +28,12 @@
 
 <script>
 import WelcomeCard from "../components/WelcomeCard";
-import AboutMe from "../components/AboutMe";
-import Triangle from "../components/Triangle";
-import SecondRec from "../components/SecondRec";
+// import AboutMe from "../components/AboutMe";
+// import Triangle from "../components/Triangle";
+// import SecondRec from "../components/SecondRec";
 export default {
   name: "HomePage",
-  components: { WelcomeCard, AboutMe, Triangle, SecondRec },
+  components: { WelcomeCard },
   methods: {
     clickme() {
       console.log("hello from click!");
