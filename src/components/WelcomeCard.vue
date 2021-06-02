@@ -7,7 +7,7 @@
           @mouseleave="(hover = false), (sing = true)"
           :class="{ active: hover, notActive: sing }"
         >
-          B
+          H
         </div>
         <div
           @mouseover="(eLet = true), (eNot = false)"
@@ -28,17 +28,17 @@
           @mouseleave="(iLet = false), (iNot = true)"
           :class="{ I: iLet, notI: iNot }"
         >
-          I
+          L
         </div>
         <div
           @mouseover="(eeLet = true), (eeNot = false)"
           @mouseleave="(eeLet = false), (eeNot = true)"
           :class="{ EE: eeLet, notEE: eeNot }"
         >
-          E
+          O
         </div>
-        <div>V</div>
-        <div>E</div>
+        <!-- <div>V</div>
+        <div>E</div> -->
       </div>
     </section>
   </div>
