@@ -3,9 +3,9 @@
     <section class="container">
       <div class="push">
         <div
-          @mouseover="(hover = true), (sing = false)"
-          @mouseleave="(hover = false), (sing = true)"
-          :class="{ active: hover, notActive: sing }"
+          @mouseover="(hLet = true), (hNot = false)"
+          @mouseleave="(hLet = false), (hNot = true)"
+          :class="{ H: hLet, notH: hNot }"
         >
           H
         </div>
@@ -49,8 +49,8 @@ export default {
   name: "WelcomeCard",
   data() {
     return {
-      hover: false,
-      sing: true,
+      hLet: false,
+      hNot: true,
       eLet: false,
       eNot: true,
       lLet: false,
@@ -72,7 +72,7 @@ section {
   width: 100vw;
   height: 80vh;
   border: solid 1px black;
-  background-color: #f4b349;
+  background-color: #6d6964;
   background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000000' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 

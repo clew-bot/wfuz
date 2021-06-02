@@ -240,6 +240,42 @@
   }
 }
 
+/* Homepage */
+@keyframes popout {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes popout {
+  from {
+    -webkit-transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes popout2 {
+  from {
+    -webkit-transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(3);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
 /* @keyframes moveUp {
     0% {
       opacity: 0;
@@ -261,3 +297,26 @@
       opacity: 0;
     }
   } */
+
+/* @keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

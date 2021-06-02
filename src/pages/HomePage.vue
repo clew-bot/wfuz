@@ -14,11 +14,18 @@
       <WelcomeCard></WelcomeCard>
       <div class="images">
         <md-content>
-          <AboutMe></AboutMe>
-
-          <SecondRec></SecondRec>
-
-          <Triangle></Triangle>
+          <ImageComponent
+            image1="/assets/img/snow.jpg"
+            image2="/assets/img/snow2.jpg"
+          ></ImageComponent>
+          <ImageComponent
+            image1="/assets/img/japannight.jpg"
+            image2="/assets/img/cafe.jpg"
+          ></ImageComponent>
+          <ImageComponent
+            image1="/assets/img/desert.jpg"
+            image2="/assets/img/valley.jpg"
+          ></ImageComponent>
         </md-content>
       </div>
     </div>
@@ -28,12 +35,10 @@
 
 <script>
 import WelcomeCard from "../components/WelcomeCard";
-import AboutMe from "../components/AboutMe";
-import Triangle from "../components/Triangle";
-import SecondRec from "../components/SecondRec";
+import ImageComponent from "../components/ImageComponent";
 export default {
   name: "HomePage",
-  components: { WelcomeCard, AboutMe, SecondRec, Triangle },
+  components: { WelcomeCard, ImageComponent },
   methods: {
     clickme() {
       console.log("hello from click!");
@@ -43,6 +48,8 @@ export default {
 </script>
 
 <style scoped>
+@import "../components/animations.css";
+
 .md-content.md-theme-default {
   background-color: rgb(231, 253, 105);
 }
@@ -67,40 +74,6 @@ export default {
   height: 30px;
   animation: popout 2s infinite;
   -webkit-animation: popout 2s infinite;
-}
-@keyframes popout {
-  from {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes popout {
-  from {
-    -webkit-transform: scale(1);
-  }
-  80% {
-    -webkit-transform: scale(1.2);
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
-
-@keyframes popout2 {
-  from {
-    -webkit-transform: scale(1);
-  }
-  80% {
-    -webkit-transform: scale(3);
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
 }
 
 .popout:hover {
@@ -128,26 +101,4 @@ export default {
   align-items: center;
   justify-content: center;
 } */
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-  80% {
-    transform: translateX(1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 </style>

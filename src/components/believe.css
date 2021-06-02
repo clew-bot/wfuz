@@ -1,9 +1,9 @@
-.notActive {
+.notH {
   color: black;
   transform: skewX(-40deg);
   animation: skewLeft 1s ease-in;
 }
-.active {
+.H {
   animation: skewRight 1s ease-in;
   transform: skewX(-40deg);
   animation-fill-mode: forwards;
