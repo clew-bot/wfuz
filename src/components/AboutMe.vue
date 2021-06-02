@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- container -->
     <div
       @mouseover="(hover = true), (blah = false)"
       @mouseleave="(hover = false), (blah = true)"
@@ -8,6 +9,8 @@
       <div>
         <img class="img1" src="/assets/img/snow.jpg" alt="girl" />
       </div>
+
+      <!-- mouseover on last image (on top) -->
       <div
         @mouseover="(hover = true), (blah = false)"
         @mouseleave="(hover = false), (blah = true)"
@@ -32,6 +35,8 @@ export default {
 </script>
 
 <style scoped>
+@import "./animations.css";
+@import "./believe.css";
 .notActive3 {
   margin: 10vw 20% 10vw 20%;
   display: flex;
@@ -83,56 +88,8 @@ export default {
   animation-fill-mode: forwards;
 }
 
-@keyframes moveInRight {
-  0% {
-    transform: skewX(-10deg);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-    transform: skewX(10deg);
-  }
-}
-@keyframes moveInRight2 {
-  0% {
-    transform: skewX(10deg);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-    transform: skewX(-10deg);
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 0.9;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .notActive {
   opacity: 1;
   animation: out 1s;
-}
-
-@keyframes out {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 </style>

@@ -1,0 +1,61 @@
+.notActive {
+  color: black;
+  transform: skewX(-40deg);
+  animation: skewLeft 1s ease-in;
+}
+.active {
+  animation: skewRight 1s ease-in;
+  transform: skewX(-40deg);
+  animation-fill-mode: forwards;
+}
+
+.notE {
+  color: black;
+  transform: skewY(-20deg);
+  animation: moveDown 1s ease-in;
+}
+.E {
+  color: blue;
+  animation: moveUp 1s ease-in;
+
+  animation-fill-mode: forwards;
+}
+
+.notl {
+  color: black;
+  transform: skewY(12deg);
+
+  animation: letterLin 1s ease-in;
+}
+.L {
+  color: blue;
+  animation: letterLout 1s ease-in;
+
+  animation-fill-mode: forwards;
+}
+
+.notI {
+  color: black;
+  transform: skewY(-20deg);
+
+  animation: letterIin 1s ease-in;
+}
+.I {
+  color: black;
+  animation: letterIout 1s ease-in;
+
+  animation-fill-mode: forwards;
+}
+
+.notEE {
+  color: black;
+  transform: skewY(15deg);
+
+  animation: letterEEin 1s ease-in;
+}
+.EE {
+  color: blue;
+  animation: letterEEout 1s ease-in;
+
+  animation-fill-mode: forwards;
+}

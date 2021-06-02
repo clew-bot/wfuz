@@ -68,78 +68,12 @@ export default {
 @import "./animations.css";
 @import "./believe.css";
 
-.notActive {
-  color: red;
-  transform: skewX(-40deg);
-  animation: skewLeft 1s ease-in;
-}
-.active {
-  color: blue;
-  animation: skewRight 1s ease-in;
-  transform: skewX(-40deg);
-  animation-fill-mode: forwards;
-}
-
-.notE {
-  color: red;
-  transform: skewY(-20deg);
-  animation: moveDown 1s ease-in;
-}
-.E {
-  color: blue;
-  animation: moveUp 1s ease-in;
-
-  animation-fill-mode: forwards;
-}
-
-.notl {
-  color: red;
-  transform: skewY(12deg);
-
-  animation: letterLin 1s ease-in;
-}
-.L {
-  color: blue;
-  animation: letterLout 1s ease-in;
-
-  animation-fill-mode: forwards;
-}
-
-.notI {
-  color: red;
-  transform: skewY(-20deg);
-
-  animation: letterIin 1s ease-in;
-}
-.I {
-  color: blue;
-  animation: letterIout 1s ease-in;
-
-  animation-fill-mode: forwards;
-}
-
-.notEE {
-  color: red;
-  transform: skewY(15deg);
-
-  animation: letterEEin 1s ease-in;
-}
-.EE {
-  color: blue;
-  animation: letterEEout 1s ease-in;
-
-  animation-fill-mode: forwards;
-}
-
 section {
   width: 100vw;
   height: 80vh;
   border: solid 1px black;
-  background-image: url("/assets/img/wonders.jpg");
-  /* transform: skewX(20deg); */
-  background-size: 100%;
-  clip-path: polygon(5% 8%, 86% 3%, 95% 92%, 16% 94%);
-  /* animation: normalize 2s ease-out; */
+  background-color: #f4b349;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000000' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .push {
@@ -147,43 +81,14 @@ section {
   height: 80vh;
   width: 100vw;
   letter-spacing: 0.8em;
-  font-size: 3rem;
-  border: solid 4px yellow;
+  font-size: 10rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-/* section h1 {
-  transform: skewX(-40deg);
-  font-size: 3vw;
-  animation: normalize2 2s ease-out;
-
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-} */
-
-/* section h1:hover {
-  animation: popOutText 2s ease-out;
-} */
-
-h1 span:hover {
-  animation: moveUp 2s ease-in;
-}
-
-@media only screen and (max-width: 600px) {
-  section {
-    width: 90%;
-    height: 100%;
-    border: solid 1px black;
-    background-image: url("/assets/img/wonders.jpg");
-    transform: scaleX(10);
-    background-size: 100%;
-  }
-  section h1 {
-    transform: skewX(-40deg);
-    font-size: 1em;
-  }
+.push > div {
+  -webkit-text-stroke: 3px white;
 }
 </style>

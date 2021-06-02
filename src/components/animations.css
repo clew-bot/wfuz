@@ -13,21 +13,32 @@
     transform: skewX(-40deg);
   }
 }
-/* LETTER B */
+/* LETTER H */
 @keyframes skewRight {
   0% {
     transform: skewX(-40deg);
+    color: black;
   }
+  10% {
+    color: green;
+  }
+
   100% {
     transform: skewX(40deg);
+    color: white;
   }
 }
 @keyframes skewLeft {
   0% {
     transform: skewX(40deg);
+    color: white;
+  }
+  10% {
+    color: red;
   }
   100% {
     transform: skewX(-40deg);
+    color: black;
   }
 }
 
@@ -35,23 +46,29 @@
 @keyframes moveUp {
   0% {
     transform: skewY(-20deg);
+    color: black;
   }
   30% {
     transform: skewX(30deg);
+    color: blue;
   }
   100% {
     transform: skewX(20deg);
+    color: white;
   }
 }
 @keyframes moveDown {
   0% {
     transform: skewX(20deg);
+    color: white;
   }
   50% {
     transform: skewX(30deg);
+    color: orange;
   }
   100% {
     transform: skewY(-20deg);
+    color: black;
   }
 }
 
@@ -59,9 +76,10 @@
 @keyframes letterLout {
   0% {
     transform: skewY(12deg);
+    color: black;
   }
   30% {
-    color: orange;
+    color: yellow;
   }
   100% {
     transform: skewX(60deg);
@@ -71,20 +89,23 @@
 @keyframes letterLin {
   0% {
     transform: skewX(60deg);
+    color: white;
   }
   50% {
     transform: skewY(-22deg);
-    color: black;
+    color: purple;
   }
   100% {
     transform: skewY(12deg);
+    color: black;
   }
 }
 
-/* LETTER I */
+/* LETTER second L */
 @keyframes letterIout {
   0% {
     transform: skewY(-20deg);
+    color: black;
   }
   20% {
     transform: skewX(180deg);
@@ -98,23 +119,26 @@
 @keyframes letterIin {
   0% {
     transform: skewX(40deg);
+    color: white;
   }
   50% {
     transform: skewX(180deg);
-    color: black;
+    color: navy;
   }
   100% {
     transform: skewY(-20deg);
+    color: black;
   }
 }
 
-/* LETTER second E */
+/* LETTER O */
 @keyframes letterEEout {
   0% {
     transform: skewY(15deg);
+    color: black;
   }
   20% {
-    color: greenyellow;
+    color: cyan;
   }
   100% {
     transform: skewX(40deg);
@@ -126,14 +150,16 @@
 @keyframes letterEEin {
   0% {
     transform: rotate(200deg);
+    color: white;
   }
   50% {
     transform: skewX(180deg);
-    color: black;
+    color: beige;
   }
   100% {
     transform: rotate(0deg);
     transform: skewY(15deg);
+    color: black;
   }
 }
 
@@ -163,6 +189,54 @@
   100% {
     transform: skewX(40deg);
     /* transform: skewX(-40deg); */
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    transform: skewX(-10deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    transform: skewX(10deg);
+  }
+}
+@keyframes moveInRight2 {
+  0% {
+    transform: skewX(10deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    transform: skewX(-10deg);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.9;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
