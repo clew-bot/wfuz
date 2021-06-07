@@ -30,6 +30,7 @@
           ></ImageComponent>
         </md-content>
       </div>
+      <Form></Form>
     </div>
     <div class="popout"></div>
   </div>
@@ -38,6 +39,7 @@
 <script>
 import WelcomeCard from "../components/WelcomeCard";
 import ImageComponent from "../components/ImageComponent";
+
 export default {
   name: "HomePage",
   components: { WelcomeCard, ImageComponent },
