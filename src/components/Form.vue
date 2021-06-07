@@ -55,7 +55,7 @@ export default {
         const rawResponse = await fetch("http://localhost:8000/api", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: { name: this.firstName },
+          body: JSON.stringify({ name: this.firstName }),
         });
         const content = await rawResponse.json();
 
