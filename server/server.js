@@ -18,5 +18,5 @@ app.get("/", (req, res) => {
 app.listen(port);
 
 app.post("/api", (req, res) => {
-  console.log("THIS IS FROM THE BACK END!", req.firstName, res);
+  console.log("THIS IS FROM THE BACK END!", req.body);
 });
