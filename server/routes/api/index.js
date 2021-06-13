@@ -1,5 +1,22 @@
 const router = require("express").Router();
 const db = require("../../models");
+
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
+
+const sess = {
+  secret: "Super secret secret",
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+
+  store: new MongoStore({
+    mongoUrl: process.env.DB_CONNECT || "mongodb://localhost/wfuz",
+    ttl: 1800,
+  }),
+};
+
+router.use(session(sess));
 // const express = require("express");
 
 router.post("/", async function(req, res) {
@@ -20,8 +37,21 @@ router.post("/", async function(req, res) {
       lastName: req.body.lastName,
       emailAd: req.body.emailAd,
       dogName: req.body.dogName,
+      id: req.body._id,
     });
+    req.session.loggedIn = true;
     console.log(userCreate);
+    console.log(req.session.loggedIn);
+    console.log(req.session);
+  }
+});
+
+router.get("/protected", async function(req, res) {
+  console.log(req);
+  if (req.session.loggedIn) {
+    res.redirect("/");
+  } else {
+    res.redirect("/login");
   }
 });
 

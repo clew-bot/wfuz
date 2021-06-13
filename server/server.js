@@ -3,7 +3,7 @@ const routes = require("./routes");
 const cors = require("cors");
 const app = express();
 const mongoose = require("mongoose");
-const mongoStore = require("connect-mongo").default;
+// const mongoStore = require("connect-mongo").default;
 
 const port = 8000;
 
@@ -20,22 +20,6 @@ mongoose.connect(
     console.log("Now connected to the wfuz database..");
   }
 );
-
-const session = require("express-session");
-const MongoStore = require("connect-mongo");
-
-const sess = {
-  secret: "Super secret secret",
-  cookie: {},
-  resave: false,
-  saveUninitialized: true,
-  store: new MongoStore({
-    mongoUrl: process.env.DB_CONNECT || "mongodb://localhost/wfuz",
-    ttl: 1800,
-  }),
-};
-
-app.use(session(sess));
 
 app.get("/", (req, res) => {
   res.send(`Hi! Server is listening on port ${port}`);
