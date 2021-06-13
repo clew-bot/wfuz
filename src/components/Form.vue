@@ -4,7 +4,7 @@
       type="text"
       label="What is your first name?"
       v-model="firstName"
-    />
+    />{{ invalidInput }}
 
     <FormulateInput
       type="text"
@@ -33,6 +33,7 @@
     />
 
     <button @click="hitBackEnd">Click me!!!!!!</button>
+    {{ globalAuth }}
   </div>
 </template>
 
@@ -47,6 +48,8 @@ export default {
       lastName: this.lastName,
       emailAd: this.emailAd,
       dogName: this.dogName,
+      globalAuth: false,
+      invalidInput: "Check All Fields Correctly!",
     };
   },
   methods: {
@@ -63,8 +66,13 @@ export default {
           }),
         });
         const content = await rawResponse.json();
-
-        console.log(content);
+        if (!content.isAuth) {
+          this.invalidInput = content.invalidInput;
+        } else {
+          this.globalAuth = content.isAuth;
+          this.invalidInput = "Congratz! Redirecting in 5..";
+          console.log("this is content", content);
+        }
       } catch (err) {
         console.log(err);
       }
