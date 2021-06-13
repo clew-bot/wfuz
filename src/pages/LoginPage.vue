@@ -46,6 +46,26 @@
         <router-link to="/register">Register</router-link></span
       >
     </div>
+    <div class="league">
+      <h1>Another Login</h1>
+      <FormulateInput
+        type="text"
+        label="What is your first name?"
+        v-model="firstName"
+      />
+
+      <FormulateInput
+        type="text"
+        label="What is your last name?"
+        v-model="lastName"
+      />
+      <FormulateInput
+        type="text"
+        label="What is your dogs name?"
+        v-model="dogName"
+      />
+      <button @click="secondaryLogin">Login</button>
+    </div>
   </div>
 </template>
 
@@ -59,6 +79,9 @@ export default {
       email: "",
       password: "",
       error: "",
+      firstName: this.firstName,
+      lastName: this.lastName,
+      dogName: this.dogName,
     };
   },
   name: "LoginPage",
@@ -75,11 +98,29 @@ export default {
         console.log("Something went wrong!", err);
       }
     },
+    async secondaryLogin() {
+      try {
+        alert("yo");
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>
 
 <style scoped>
+.league {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.league > div {
+  margin-top: 10px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
