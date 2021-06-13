@@ -56,9 +56,9 @@ export default {
           method: "post",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            name: this.firstName,
+            firstName: this.firstName,
             lastName: this.lastName,
-            email: this.emailAd,
+            emailAd: this.emailAd,
             dogName: this.dogName,
           }),
         });
