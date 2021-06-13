@@ -53,7 +53,7 @@ export default {
     async hitBackEnd() {
       try {
         const rawResponse = await fetch("http://localhost:8000/api", {
-          method: "POST",
+          method: "post",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             name: this.firstName,
