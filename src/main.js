@@ -7,24 +7,25 @@ import LoginPage from "./pages/LoginPage";
 import axios from "axios";
 import SecretPage from "./pages/SecretPage";
 import Register from "./pages/Register";
-import firebase from "firebase/app";
+// import firebase from "firebase/app";
 import VueMaterial from "vue-material";
 import VueFormulate from "@braid/vue-formulate";
 import "vue-material/dist/vue-material.min.css";
 import "vue-material/dist/theme/default-dark.css";
+// import { createApp } from "vue";
 
 Vue.use(VueMaterial);
 Vue.use(VueFormulate);
-const firebaseConfig = {
-  apiKey: "AIzaSyD1YXIvTZyoPNWOXacIe--hRkRcqfIJBQ8",
-  authDomain: "vuetester-34562.firebaseapp.com",
-  projectId: "vuetester-34562",
-  storageBucket: "vuetester-34562.appspot.com",
-  messagingSenderId: "688126937817",
-  appId: "1:688126937817:web:8fa6cd926e3ae3a79d4cc8",
-  measurementId: "G-PHEE6Z1RJ6",
-};
-firebase.initializeApp(firebaseConfig);
+// const firebaseConfig = {
+//   apiKey: "AIzaSyD1YXIvTZyoPNWOXacIe--hRkRcqfIJBQ8",
+//   authDomain: "vuetester-34562.firebaseapp.com",
+//   projectId: "vuetester-34562",
+//   storageBucket: "vuetester-34562.appspot.com",
+//   messagingSenderId: "688126937817",
+//   appId: "1:688126937817:web:8fa6cd926e3ae3a79d4cc8",
+//   measurementId: "G-PHEE6Z1RJ6",
+// };
+// firebase.initializeApp(firebaseConfig);
 
 Vue.prototype.$axios = axios;
 Vue.use(VueRouter);
@@ -44,25 +45,18 @@ export const router = new VueRouter({
     },
   ],
 });
-router.beforeEach((to, from, next) => {
-  const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
-  const isAuthenticated = firebase.auth().currentUser;
-  if (requiresAuth && !isAuthenticated) {
-    next("/login");
-  } else {
-    next();
-  }
-});
 
-let app;
-
-firebase.auth().onAuthStateChanged((user) => {
-  console.log(user);
-  if (!app) {
-    app = new Vue({
-      router,
-      store,
-      render: (h) => h(App),
-    }).$mount("#app");
-  }
-});
+// router.beforeEach((to, from, next) => {
+//   const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
+//   const isAuthenticated = firebase.auth().currentUser;
+//   if (requiresAuth && !isAuthenticated) {
+//     next("/login");
+//   } else {
+//     next();
+//   }
+// });
+new Vue({
+  router,
+  store,
+  render: (h) => h(App),
+}).$mount("#app");

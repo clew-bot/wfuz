@@ -29,19 +29,19 @@
 </template>
 
 <script>
-import firebase from "firebase/app";
-import "firebase/auth";
+// import firebase from "firebase/app";
+// import "firebase/auth";
 export default {
   name: "SideNav",
   created() {
-    firebase.auth().onAuthStateChanged((user) => {
-      this.loggedIn == !!user;
-      // if(user) {
-      //   this.loggedIn = true
-      // } else {
-      //   this.loggedIn = false
-      // }
-    });
+    // firebase.auth().onAuthStateChanged((user) => {
+    //   this.loggedIn == !!user;
+    // if(user) {
+    //   this.loggedIn = true
+    // } else {
+    //   this.loggedIn = false
+    // }
+    // });
   },
   data() {
     return {
@@ -49,19 +49,19 @@ export default {
     };
   },
   methods: {
-    async signout() {
-      console.log("testing");
-      prompt(
-        "Are you sure you want to sign out? You will be redirected to the homepage"
-      );
-      try {
-        const data = await firebase.auth().signOut();
-        console.log("thedata", data);
-        this.$router.replace({ name: "home" });
-      } catch (err) {
-        console.log(err);
-      }
-    },
+    // async signout() {
+    //   console.log("testing");
+    //   prompt(
+    //     "Are you sure you want to sign out? You will be redirected to the homepage"
+    //   );
+    //   try {
+    //     const data = await firebase.auth().signOut();
+    //     console.log("thedata", data);
+    //     this.$router.replace({ name: "home" });
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // },
   },
 };
 </script>

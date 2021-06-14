@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import firebase from "firebase";
-import "firebase/auth";
+// import firebase from "firebase";
+// import "firebase/auth";
 
 export default {
   name: "Register",
@@ -27,17 +27,17 @@ export default {
     };
   },
   methods: {
-    async pressed() {
-      try {
-        const user = firebase
-          .auth()
-          .createUserWithEmailAndPassword(this.email, this.password);
-        console.log(user);
-        this.$router.replace({ name: "secret" });
-      } catch (err) {
-        console.log("Something went wrong!", err);
-      }
-    },
+    // async pressed() {
+    //   try {
+    //     const user = firebase
+    //       .auth()
+    //       .createUserWithEmailAndPassword(this.email, this.password);
+    //     console.log(user);
+    //     this.$router.replace({ name: "secret" });
+    //   } catch (err) {
+    //     console.log("Something went wrong!", err);
+    //   }
+    // },
   },
 };
 </script>

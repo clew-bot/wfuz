@@ -70,8 +70,8 @@
 </template>
 
 <script>
-import firebase from "firebase/app";
-import "firebase/auth";
+// import firebase from "firebase/app";
+// import "firebase/auth";
 
 export default {
   data() {
@@ -86,18 +86,18 @@ export default {
   },
   name: "LoginPage",
   methods: {
-    async onSubmit(e) {
-      e.preventDefault();
-      try {
-        const val = await firebase
-          .auth()
-          .signInWithEmailAndPassword(this.email, this.password);
-        console.log(val);
-        this.$router.replace({ name: "secret" });
-      } catch (err) {
-        console.log("Something went wrong!", err);
-      }
-    },
+    // async onSubmit(e) {
+    //   e.preventDefault();
+    //   try {
+    //     const val = await firebase
+    //       .auth()
+    //       .signInWithEmailAndPassword(this.email, this.password);
+    //     console.log(val);
+    //     this.$router.replace({ name: "secret" });
+    //   } catch (err) {
+    //     console.log("Something went wrong!", err);
+    //   }
+    // },
     async secondaryLogin() {
       try {
         alert("yo");

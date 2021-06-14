@@ -33,6 +33,7 @@
     />
 
     <button @click="hitBackEnd">Click me!!!!!!</button>
+    <button @click="goHome">Login</button>
     {{ globalAuth }}
   </div>
 </template>
@@ -72,10 +73,17 @@ export default {
           this.globalAuth = content.isAuth;
           this.invalidInput = "Congratz! Redirecting in 5..";
           console.log("this is content", content);
+          setTimeout(function() {
+            // alert("Thanks for visiting!");
+            this.$router.push({ path: "/" });
+          }, 5000);
         }
       } catch (err) {
         console.log(err);
       }
+    },
+    goHome() {
+      this.$router.replace({ name: "home" });
     },
   },
 };

@@ -47,37 +47,37 @@
 
 <script>
 // import SideNav from "../components/SideNav";
-import firebase from "firebase/app";
-import "firebase/auth";
+// import firebase from "firebase/app";
+// import "firebase/auth";
 export default {
   name: "AppHeader",
   data() {
     return { loggedIn: false };
   },
   created() {
-    firebase.auth().onAuthStateChanged((user) => {
-      this.loggedIn == !!user;
-      // if(user) {
-      //   this.loggedIn = true
-      // } else {
-      //   this.loggedIn = false
-      // }
-    });
+    // firebase.auth().onAuthStateChanged((user) => {
+    //   this.loggedIn == !!user;
+    // if(user) {
+    //   this.loggedIn = true
+    // } else {
+    //   this.loggedIn = false
+    // }
+    // });
   },
   methods: {
-    async signout() {
-      const letgo = prompt("You sure you want to to sign out?");
-      if (letgo !== "yes") {
-        return;
-      }
-      try {
-        const data = await firebase.auth().signOut();
-        console.log("i'm data", data);
-        this.$router.replace({ name: "home" });
-      } catch (err) {
-        console.log(err);
-      }
-    },
+    // async signout() {
+    //   const letgo = prompt("You sure you want to to sign out?");
+    //   if (letgo !== "yes") {
+    //     return;
+    //   }
+    //   try {
+    //     const data = await firebase.auth().signOut();
+    //     console.log("i'm data", data);
+    //     this.$router.replace({ name: "home" });
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // },
   },
   // components: { SideNav },
 };
